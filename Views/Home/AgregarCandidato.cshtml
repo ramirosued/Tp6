@@ -1,0 +1,12 @@
+<h1>Agregado de candidato</h1>
+<h1>ssss</h1>
+
+<form action='@Url.Action("GuardarCandidato", "Home")'>
+    <input type="hidden" name="FkPartido" value="@ViewBag.IdPartido">
+    <input autocomplete="off" type="text" name="Nombre" required placeholder="Ingrese nombre">
+    <input autocomplete="off" type="text" name="Apellido" required placeholder="Ingrese apellido">
+    <input autocomplete="off" type="text" name="FechaNacimiento" required placeholder="Ingrese fecha nacimiento">
+    <input autocomplete="off" type="text" name="Foto" required placeholder="Ingrese link foto">
+    <input autocomplete="off" type="text" name="Postulacion" required placeholder="Ingrese postulacion">
+    <input type="submit" value="Cargar">
+</form>

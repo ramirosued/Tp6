@@ -1,12 +1,10 @@
-public class Partido
-{
-    public int IdPartido {get;set;}
-    public string Nombre {get;set;}
-    public string Logo {get;set;}
-    public string SitioWeb {get;set;}
-    public DateTime FechaFundacion {get;set;}
-    public int CantidadDiputados {get;set;}
-    public int CantidadSenadores {get;set;}
+public class Candidato{
+    public int IdCandidato{get;set;}
+    public int FkPartido{get;set;}
+    public string Apellido{get;set;}
+    public string Nombre{get;set;}
+    public DateTime FechaNacimiento{get;set;}
+    public string Foto{get;set;}
+    public string Postulacion{get;set;}
 
-    
 }

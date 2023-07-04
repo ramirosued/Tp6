@@ -2,4 +2,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>TP XX - Index</h1>
+@foreach(Partido item in ViewBag.ListaPartidos){
+<h2>@item.Nombre</h2>
+<a href='@Url.Action("DetallePartido", new{IdPartido=item.IdPartido})'><img src="@item.Logo" height="200px"></a>
+}

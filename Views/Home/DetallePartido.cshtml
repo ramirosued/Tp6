@@ -1,0 +1,15 @@
+<h1>@ViewBag.InfoPartido.Nombre</h1>
+<img src="@ViewBag.InfoPartido.Logo" alt="">
+<h3>Fecha de fundación: @ViewBag.InfoPartido.FechaFundacion</h3>
+<h4>Cantidad diputados: @ViewBag.InfoPartido.CantidadDiputados</h4>
+<h4>Cantidad senadores: @ViewBag.InfoPartido.CantidadSenadores</h4>
+<h4><a href="@ViewBag.InfoPartido.SitioWeb.">Sitio web aquí</a></h4>
+<ul>
+    @foreach (Candidato item in ViewBag.ListaCandidatos)
+    {
+       <li><a href='@Url.Action("DetalleCandidato", new{IdCandidato=@item.IdCandidato})'>@item.Nombre @item.Apellido</a></li> 
+       <a href='@Url.Action("EliminarCandidato", new{IdPartido=@ViewBag.InfoPartido.IdPartido, IdCandidato=@item.IdCandidato})'><button onclick="alert('Estas a punto de eliminar un candidato')"><img src="/img/eliminar.jpg" width="5%"></button></a>
+    }
+</ul>
+<a href='@Url.Action("AgregarCandidato", new{IdPartido=@ViewBag.InfoPartido.IdPartido})'>Agregar candidato</a>
+
