@@ -8,7 +8,7 @@
     @foreach (Candidato item in ViewBag.ListaCandidatos)
     {
        <li><a href='@Url.Action("DetalleCandidato", new{IdCandidato=@item.IdCandidato})'>@item.Nombre @item.Apellido</a></li> 
-       <a href='@Url.Action("EliminarCandidato", new{IdPartido=@ViewBag.InfoPartido.IdPartido, IdCandidato=@item.IdCandidato})'><button onclick="alert('Estas a punto de eliminar un candidato')"><img src="/img/eliminar.jpg" width="5%"></button></a>
+       <a href='@Url.Action("ConfirmarEliminarCandidato", new{IdPartido=@ViewBag.InfoPartido.IdPartido, IdCandidato=@item.IdCandidato})'><img src="/img/eliminar.jpg" width="5%"></a>
     }
 </ul>
 <a href='@Url.Action("AgregarCandidato", new{IdPartido=@ViewBag.InfoPartido.IdPartido})'>Agregar candidato</a>

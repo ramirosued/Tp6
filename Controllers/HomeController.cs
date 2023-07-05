@@ -40,6 +40,13 @@ public class HomeController : Controller
         return RedirectToAction("DetallePartido",new{IdPartido=IdPartido});
     }
 
+    public IActionResult ConfirmarEliminarCandidato(int IdCandidato, int IdPartido){
+
+        ViewBag.IdPartido=IdPartido;
+        ViewBag.InfoCandidato=BD.InfoCandidato(IdCandidato);
+        return View("ConfirmarEliminarCandidato");
+    }
+
     public IActionResult Elecciones()
     {
         return View();
