@@ -1,12 +1,35 @@
-<h1>Agregado de candidato</h1>
-<h1>ssss</h1>
+<h1 class="agreCandi">Agregado de candidato</h1>
 
-<form action='@Url.Action("GuardarCandidato", "Home")'>
+<section class="agregarCandidato">
+<div class="formulario-general">
+    <form action='@Url.Action("GuardarCandidato", "Home")'>
     <input type="hidden" name="FkPartido" value="@ViewBag.IdPartido">
-    <input autocomplete="off" type="text" name="Nombre" required placeholder="Ingrese nombre">
-    <input autocomplete="off" type="text" name="Apellido" required placeholder="Ingrese apellido">
-    <input autocomplete="off" type="text" name="FechaNacimiento" required placeholder="Ingrese fecha nacimiento">
-    <input autocomplete="off" type="text" name="Foto" required placeholder="Ingrese link foto">
-    <input autocomplete="off" type="text" name="Postulacion" required placeholder="Ingrese postulacion">
-    <input type="submit" value="Cargar">
-</form>
+        <div class="formulario">
+            <label> Nombre</label>
+            <input autocomplete="off" type="text" name="Nombre" required placeholder="Ingrese nombre">
+        </div>
+
+        <div class="formulario">
+            <label>Apellido</label>
+            <input autocomplete="off" type="text" name="Apellido" required placeholder="Ingrese apellido">
+        </div>
+
+        <div class="formulario">
+            <label>Fecha Nacimiento</label>
+            <input autocomplete="off" type="date" name="FechaNacimiento" required placeholder="Ingrese fecha nacimiento">
+        </div>
+
+        <div class="formulario">
+            <label>Foto</label>
+            <input autocomplete="off" type="text" name="Foto" required placeholder="Ingrese link foto">
+        </div>
+
+        <div class="formulario">
+            <label>Postulacion Candidato</label>
+            <input autocomplete="off" type="text" name="Postulacion" required placeholder="Ingrese postulacion">
+        </div>
+
+        <input class="boton" type="submit" value="Cargar">
+    </form>
+</div>
+</section>

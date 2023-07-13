@@ -2,7 +2,15 @@
     ViewData["Title"] = "Index";
 }
 
-@foreach(Partido item in ViewBag.ListaPartidos){
-<h2>@item.Nombre</h2>
-<a href='@Url.Action("DetallePartido", new{IdPartido=item.IdPartido})'><img src="@item.Logo" height="200px"></a>
-}
+<div class="partidos">
+    @foreach (Partido item in ViewBag.ListaPartidos)
+    {
+        <div>
+            <h2>@item.Nombre</h2>
+            <div class="img">
+                <a href='@Url.Action("DetallePartido", new{IdPartido=item.IdPartido})'><img src="@item.Logo" height="150px"></a>
+            </div>
+        </div>
+    }
+</div>
+

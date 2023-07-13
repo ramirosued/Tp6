@@ -1,4 +1,5 @@
 <h1>Estas a punto de elimar un candidato, estas seguro</h1>
-
-<a href='@Url.Action("EliminarCandidato", new{IdPartido=@ViewBag.IdPartido, IdCandidato=@ViewBag.InfoCandidato.IdCandidato})'>Si</a>
-<a href='@Url.Action("DetallePartido", new{IdPartido=@ViewBag.IdPartido})'>No</a>
+<div class="confEliminar">
+<a class="siEliminar" href='@Url.Action("EliminarCandidato", new{IdPartido=@ViewBag.IdPartido, IdCandidato=@ViewBag.InfoCandidato.IdCandidato})'>Si</a>
+<a class="noEliminar" href='@Url.Action("DetallePartido", new{IdPartido=@ViewBag.IdPartido})'>No</a>
+</div>

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿﻿using Microsoft.AspNetCore.Mvc;
 using Tp6.Models;
 namespace Tp6.Controllers;
 
@@ -47,7 +47,7 @@ public class HomeController : Controller
         return View("ConfirmarEliminarCandidato");
     }
 
-    public IActionResult Elecciones()
+    public IActionResult Elecciones2023()
     {
         return View();
     }
@@ -56,4 +56,3 @@ public class HomeController : Controller
         return View();
     }
 }
-
