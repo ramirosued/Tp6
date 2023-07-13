@@ -1,5 +1,9 @@
-<a href='@Url.Action("DetallePartido",new{IdPartido=@ViewBag.InfoCandidato.FkPartido})'>Volver</a>
-<h1>@ViewBag.InfoCandidato.Nombre @ViewBag.InfoCandidato.Apellido</h1>
-<h3>@ViewBag.InfoCandidato.FechaNacimiento</h3>
-<img src="@ViewBag.InfoCandidato.Foto" alt="foto">
-<h4>@ViewBag.InfoCandidato.Postulacion</h4>
+<section class="content">
+    <div class="informacion">
+        <a href='@Url.Action("DetallePartido",new{IdPartido=@ViewBag.InfoCandidato.FkPartido})'>Volver</a>
+        <h1>@ViewBag.InfoCandidato.Nombre @ViewBag.InfoCandidato.Apellido</h1>
+        <h3>@ViewBag.InfoCandidato.Postulacion</h3>
+        <h3>FechaNacimiento: @ViewBag.InfoCandidato.FechaNacimiento.ToShortDateString()</h3>
+        <img src="@ViewBag.InfoCandidato.Foto" alt="foto">
+    </div>
+</section>

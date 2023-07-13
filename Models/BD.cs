@@ -3,7 +3,7 @@ using Dapper;
 namespace Tp6.Models;
 public static class BD
 {
-    private static string connectionString = @"Server=localhost;DataBase=Elecciones2023;Trusted_Connection=True;";
+    private static string connectionString = @"Server=DESKTOP-K5G1LDU\SQLEXPRESS;DataBase=Elecciones2023;Trusted_Connection=True;";
     public static void AgregarCandidato(Candidato can)
     {
         string sql = "INSERT INTO Candidato(FkPartido,Apellido,Nombre,FechaNacimiento,Foto,Postulacion) VALUES (@FkPartido, @Apellido, @Nombre, @FechaNacimiento, @Foto, @Postulacion)";

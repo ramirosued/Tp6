@@ -1,8 +1,8 @@
-<section class="partido">
+<section class="content">
     <div class="informacion">
         <h1>@ViewBag.InfoPartido.Nombre</h1>
         <img src="@ViewBag.InfoPartido.Logo">
-        <h3>Fecha de fundación: @ViewBag.InfoPartido.FechaFundacion</h3>
+        <h3>Fecha de fundación: @ViewBag.InfoPartido.FechaFundacion.ToShortDateString()</h3>
         <h4>Cantidad diputados: @ViewBag.InfoPartido.CantidadDiputados</h4>
         <h4>Cantidad senadores: @ViewBag.InfoPartido.CantidadSenadores</h4>
         <h4><a href="@ViewBag.InfoPartido.SitioWeb.">Sitio web aquí</a></h4>
@@ -14,14 +14,18 @@
             @foreach (Candidato item in ViewBag.ListaCandidatos)
             {
                 <div>
-                    <li><a href='@Url.Action("DetalleCandidato", new{IdCandidato=@item.IdCandidato})'>@item.Nombre
-                            @item.Apellido</a></li>
-                    <a href='@Url.Action("ConfirmarEliminarCandidato", new{IdPartido=@ViewBag.InfoPartido.IdPartido, IdCandidato=@item.IdCandidato})'><img
+                    <a
+                        href='@Url.Action("DetalleCandidato", new{IdCandidato=@item.IdCandidato})'>@item.Nombre
+                        @item.Apellido</a>
+                    <a
+                        href='@Url.Action("ConfirmarEliminarCandidato", new{IdPartido=@ViewBag.InfoPartido.IdPartido, IdCandidato=@item.IdCandidato})'><img
                             src="/img/eliminar.jpg" height="25px"></a>
                 </div>
             }
         </ul>
-        
-        <a href='@Url.Action("AgregarCandidato", new{IdPartido=@ViewBag.InfoPartido.IdPartido})'>Agregar candidato</a>
+
+        <a class="agreCandi"
+            href='@Url.Action("AgregarCandidato", new{IdPartido=@ViewBag.InfoPartido.IdPartido})'>Agregar
+            candidato</a>
     </div>
 </section>

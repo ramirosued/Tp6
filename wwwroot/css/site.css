@@ -28,10 +28,14 @@ header ul
   flex-direction: row;
   align-items: center;
 }
+a{
+  color: black;
+}
 body {
   background-image: url("/img/casaRosada.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 footer {
@@ -51,23 +55,24 @@ footer {
 .partidos div{
   width: 30%;
   background-color: aliceblue;
-  text-align: center;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.partidos .img{
+.partidos div img{
   width: 90%;
   height: auto;
-  align-content: center;
-  padding: 5% 0;
 }
 
 .partidos h2{
+  width: 98%;
+  text-align: center;
   background-color: rgb(219, 219, 219);
   padding: 1%;
 }
 
 /*Detalle Partido*/
-.partido{
+.content{
   display: flex;
   flex-direction: row;
   justify-content: space-around ;
@@ -101,35 +106,17 @@ text-decoration: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 70%;
+  width: 100%;
   padding: 2%; 
 }
-
-
-.candidato1 li{
-  border: 1px solid black;
-  background-color: yellow;
-  border-radius: 20px;
-}
-
-.candidato a{
-  border: 1px solid black;
-  background-color: green;
-  border-radius: 20px;
-}
-
-
-
-
 /*Agregar Candidato*/
 .agreCandi{
   margin-top: 1%;
-  margin-left: 10%;
-}
-.agregarCandidato{
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  padding: 2% 3%;
+  border-radius: 5px;
+  background-color: darkblue;
+  color: white;
+  text-align: center;
 }
 
 .formulario-general{
@@ -139,6 +126,7 @@ text-decoration: none;
  border-radius: 8px;
  margin-top: 2%;
  background-color: rgba(255, 255, 255, 0.815);
+ text-align: center;
 }
 
 form{
@@ -148,10 +136,10 @@ form{
 .formulario{
   display: flex;
   flex-direction: column;
-  text-align: center;
+  
 }
 
-.formulario label{
+label{
   margin: 1%;
   font-size: 20px;
   color: rgb(0, 0, 0);
@@ -176,25 +164,23 @@ font-size: 10px;
 
 /*Confirmar Eliminar Candidato*/
 .confEliminar{
-  margin-top: 3%;
-  margin-left: 3%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 .siEliminar{
   padding: 0.5% 3%;
   border: 1px solid black;
-  border-radius: 15px;
   background-color: green;
 }
 .noEliminar{
   padding: 0.5% 3%;
   border: 1px solid black;
-  border-radius: 15px;
   background-color: red;
 }
 
 /*Creditos*/
-.nosotros{
-}
+
 .imagenMia{
 background-color: rgba(0, 0, 0, 0.678);
 padding: 2%;
@@ -207,6 +193,7 @@ margin-left: 3%;
 /*Elecciones2023*/
 .elecciones2023{
   background-color: rgba(255, 255, 255, 0.685);
+  padding: 2%;
   color: black;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
